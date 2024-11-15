@@ -1,18 +1,32 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule, Route } from '@angular/router';
 
-import { AppRoutingModule } from './app-routing.module';
+//import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './components/home/home.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { PlayersFullComponent } from './components/playersFull/playersFull.component';
+import { PlayersSingleComponent } from './components/playersSingle/playersSingle.component';
 
+const routes: Route[] = [
+  { path: '', component: HomeComponent },
+  { path: 'players', component: PlayersFullComponent },
+];
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    NavbarComponent,
+    PlayersFullComponent,
+    PlayersSingleComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    // AppRoutingModule,
+    RouterModule.forRoot(routes),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
