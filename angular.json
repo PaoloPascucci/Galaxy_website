@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Galaxy_website:build:production"
+              "buildTarget": "Galaxy_website:build:production"
             },
             "development": {
-              "browserTarget": "Galaxy_website:build:development"
+              "buildTarget": "Galaxy_website:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Galaxy_website:build"
+            "buildTarget": "Galaxy_website:build"
           }
         },
         "test": {
